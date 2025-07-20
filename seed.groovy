@@ -9,6 +9,8 @@ multibranchPipelineJob('cms') {
     configFiles {
         customConfig {
             id("env")
+            name("env")
+            comment("")
             content("""
             BANANA=ananas
             """)
