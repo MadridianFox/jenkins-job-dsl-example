@@ -5,15 +5,18 @@ multibranchPipelineJob('cms') {
             remote('https://gitlab.com/greensight/ensi/cms/cms.git')
         }
     }
-
-    configFiles {
-        customConfig {
-            id("cms/env")
-            name("env")
-            comment("")
-            content("""
-            BANANA=ananas
-            """)
+    properties {
+        folderConfigFiles {
+            configs {
+                customConfig {
+                    id("env")
+                    name("env")
+                    comment("")
+                    content("""
+BANANA=ananas
+""")
+                }
+            }
         }
     }
 }
