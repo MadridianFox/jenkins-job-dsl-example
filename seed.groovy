@@ -1,14 +1,8 @@
-pipeline {
-    agent any
-    stages {
-        stage('Generate Jobs') {
-            steps {
-                job("test") {
-                    steps {
-                        shell("env")
-                    }
-                }
-            }
+multibranchPipelineJob('cms') {
+    branchSources {
+        git {
+            id('cms')
+            remote('https://gitlab.com/greensight/ensi/cms/cms.git')
         }
     }
 }
