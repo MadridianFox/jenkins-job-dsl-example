@@ -8,7 +8,7 @@ multibranchPipelineJob('cms') {
 
     configFiles {
         customConfig {
-            id("env")
+            id("cms/env")
             name("env")
             comment("")
             content("""
